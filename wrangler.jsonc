@@ -1,0 +1,9 @@
+{
+    "$schema": "node_modules/wrangler/config-schema.json",
+    "name": "personalwebsite",
+    "compatibility_date": "2026-10-23",
+    // Only upload the built site, not the whole repo
+    "assets": {
+        "directory": "./dist"
+    }
+}
