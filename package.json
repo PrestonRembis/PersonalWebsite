@@ -1,0 +1,21 @@
+{
+  "name": "personalwebsite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "node build.js && tailwindcss -i styles.css -o dist/output.css --minify",
+    "dev": "npm run build && npx serve dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "concurrently": "^10.0.6",
+    "tailwindcss": "^4.2.0"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.2.0"
+  }
+}
