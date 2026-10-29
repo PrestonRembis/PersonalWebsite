@@ -7,18 +7,19 @@
     <title>Contact | Preston Rembis</title>
     <link rel="stylesheet" href="/output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="/reveal.js"></script>
 </head>
 
 <body class="bg-stone-900 text-white flex flex-col min-h-screen">
     <!-- include:header -->
 
     <main class="flex-1">
-        <h2 class="text-center text-2xl font-bold text-orange-500 mt-6 mb-4">Reach Out!</h2>
-        <p class="mb-6 text-lg text-gray-300 text-center">
+        <h2 class="text-center text-2xl font-bold text-orange-500 mt-6 mb-4" data-reveal>Reach Out!</h2>
+        <p class="mb-6 text-lg text-gray-300 text-center [--reveal-delay:150ms]" data-reveal>
             Feel free to reach out to me via the form below and I will get back to you as soon as possible.
         </p>
 
-        <div class="flex justify-center">
+        <div class="flex justify-center [--reveal-delay:300ms]" data-reveal>
             <form id="contact-form" class="bg-stone-800 p-6 rounded-lg w-full max-w-md">
                 <div class="mb-4">
                     <label for="name" class="block text-gray-300 mb-2">Name</label>

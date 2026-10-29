@@ -25,7 +25,7 @@ const pages = {
     'Contact/index.html': 'contact',
 };
 
-const assets = ['nav.js', 'time.js', 'ME.jpg'];
+const assets = ['nav.js', 'time.js', 'reveal.js', 'typewriter.js', 'ME.jpg'];
 
 const navLinkBase = "relative inline-block py-1 text-orange-500 transition-colors duration-300 hover:text-orange-300 "
     + "after:content-[''] after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:bg-orange-400 "

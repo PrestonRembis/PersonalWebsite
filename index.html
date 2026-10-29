@@ -7,23 +7,25 @@
     <title>Preston Rembis</title>
     <link rel="stylesheet" href="/output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="/reveal.js"></script>
 </head>
 
 <body class="bg-stone-900 text-white flex flex-col min-h-screen">
     <!-- include:header -->
     <div class="flex-1">
         <div class="flex flex-col items-center gap-6 px-6 mb-6 mt-12">
-            <h1 class="text-4xl font-bold text-orange-500">Hello, I'm Preston Rembis</h1>
-            <p class="mb-0 text-xl text-gray-300 text-center">
-                Software Developer
+            <h1 class="text-5xl font-bold text-orange-500 text-center" data-reveal>Hello, I'm Preston Rembis</h1>
+            <p class="mb-0 text-xl text-gray-300 text-center [--reveal-delay:150ms]" data-reveal aria-label="Software Developer">
+                <span id="typed-text" data-text="Software Developer" aria-hidden="true"></span><span class="ml-0.5 text-orange-500 animate-blink" aria-hidden="true">|</span>
             </p>
-            <p class="flex items-center gap-2 text-sm text-gray-400">
+            <p class="flex items-center gap-2 text-sm text-gray-400 [--reveal-delay:300ms]" data-reveal>
                 <span id="current-time"></span>
             </p>
         </div>
-        <div class="flex">
-            <a href="/Contact" class="bg-orange-500 hover:bg-orange-400 hover:transform hover:scale-105 text-white font-bold py-2 px-4 rounded mx-auto transition-all duration-300 ease-in-out">
+        <div class="flex [--reveal-delay:450ms]" data-reveal>
+            <a href="/Contact" class="group inline-flex items-center gap-3 bg-orange-500 hover:bg-orange-400 text-3xl text-white font-bold py-2 px-4 rounded mx-auto shadow-lg shadow-orange-500/0 hover:shadow-orange-500/40 hover:-translate-y-1 active:translate-y-0 active:scale-95 transition-all duration-300 ease-in-out motion-reduce:transition-none motion-reduce:hover:translate-y-0">
                 Contact Me
+                <i class="fa-solid fa-paper-plane text-2xl transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:rotate-12 motion-reduce:transition-none" aria-hidden="true"></i>
             </a>
         </div>
     </div>
@@ -32,6 +34,7 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="/nav.js"></script>
     <script src="/time.js"></script>
+    <script src="/typewriter.js"></script>
 </body>
 
 </html>
