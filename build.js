@@ -1,4 +1,4 @@
-// Assembles the static site into dist/: injects the header/footer partials,
+// Assembles the static site into dist/: injects the head/header/footer partials,
 // marks the active nav link, and fills in the Web3Forms key from the environment.
 const fs = require('fs');
 const path = require('path');
@@ -25,7 +25,7 @@ const pages = {
     'Contact/index.html': 'contact',
 };
 
-const assets = ['nav.js', 'time.js', 'reveal.js', 'typewriter.js', 'ME.jpg'];
+const assets = ['nav.js', 'time.js', 'reveal.js', 'typewriter.js', 'ME.jpg', 'FaviconLogo.svg', 'favicon.ico', 'apple-touch-icon.png'];
 
 const navLinkBase = "relative inline-block py-1 text-orange-500 transition-colors duration-300 hover:text-orange-300 "
     + "after:content-[''] after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:bg-orange-400 "
@@ -33,6 +33,7 @@ const navLinkBase = "relative inline-block py-1 text-orange-500 transition-color
 const navLinkActive = ' text-orange-300 font-semibold after:scale-x-100';
 const navLinkInactive = ' hover:after:scale-x-100';
 
+const head = fs.readFileSync(path.join(__dirname, 'components/head.html'), 'utf8').trimEnd();
 const header = fs.readFileSync(path.join(__dirname, 'components/header.html'), 'utf8');
 const footer = fs.readFileSync(path.join(__dirname, 'components/footer.html'), 'utf8');
 
@@ -41,6 +42,7 @@ for (const [page, currentPage] of Object.entries(pages)) {
         navLinkBase + (pageKey === currentPage ? navLinkActive : navLinkInactive));
 
     const html = fs.readFileSync(path.join(__dirname, page), 'utf8')
+        .replace('<!-- include:head -->', head)
         .replace('<!-- include:header -->', pageHeader)
         .replace('<!-- include:footer -->', footer)
         .replaceAll('{{WEB3FORMS_ACCESS_KEY}}', accessKey);
